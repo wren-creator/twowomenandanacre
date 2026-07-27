@@ -18,10 +18,15 @@ jams) launching soon. Hosted on GitHub Pages.
     beside the "Our Acre" text
   - `harvest-counter.jpg` — fresh harvest with a jar of pickled okra,
     used beside the Shop section
+  - `fig-tree.jpg`, `grape-vine.jpg`, `squash-blossom.jpg`,
+    `cabbage-head.jpg` — the "what we grow, this season" snapshot strip
+    under the "what we do" cards
+  - `farm-girl-cinnamon-rolls.jpg`, `farm-girl-sourdough.jpg` — the
+    "Friends of the Acre" card for Farm Girl Bakery
   - `bed-closeup.jpg` — a raised bed close-up, not placed on the page
-    yet, good candidate for a future gallery or the Organic Growing
-    card once there are matching photos for Agritourism and Foraging
-    too
+    yet, good candidate for a future addition to the grow strip or the
+    Organic Growing card once there are matching photos for Agritourism
+    and Foraging too
 
 ## More photos later
 
@@ -29,7 +34,14 @@ The three `.packet` cards in "what we do" (Organic Growing, Agritourism,
 Foraging & Education) still use line-art icons rather than photos, to
 keep that grid visually consistent until there are photos for all three.
 Once there are, swap the `<svg class="icon">` blocks in `index.html` for
-`<img>` tags.
+`<img>` tags. More snapshots can be added to `.grow-strip` any time, it's
+just a repeating `<figure>` pattern.
+
+## Friends of the Acre
+
+A `.friends-grid` of `.friend-card`s for local farms and makers, each
+with two photos and a link (currently just Farm Girl Bakery). Copy the
+existing `.friend-card` block in `index.html` to add another.
 
 ## Contact
 

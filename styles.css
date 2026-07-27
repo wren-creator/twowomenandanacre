@@ -243,6 +243,40 @@ h1, h2, h3 {
   margin: 0;
 }
 
+/* ---------- grow strip: seasonal snapshots ---------- */
+.grow-strip-tag { margin-top: 3rem; }
+.grow-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+.grow-strip figure {
+  margin: 0;
+  width: 160px;
+  background: var(--bg-panel);
+  border: 8px solid var(--bg-panel);
+  box-shadow: 0 5px 0 var(--shadow);
+  text-align: center;
+}
+.grow-strip figure:nth-child(odd) { transform: rotate(-2deg); }
+.grow-strip figure:nth-child(even) { transform: rotate(2deg); }
+.grow-strip img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.grow-strip figcaption {
+  font-family: var(--font-hand);
+  font-size: 1.1rem;
+  color: var(--ink-dim);
+  padding: 0.4rem 0 0.15rem;
+}
+@media (max-width: 620px) {
+  .grow-strip figure { width: calc(50% - 0.75rem); }
+}
+
 /* ---------- shop ---------- */
 .shop-wrap {
   display: grid;
@@ -288,6 +322,45 @@ h1, h2, h3 {
   transform: rotate(6deg);
   white-space: nowrap;
 }
+
+/* ---------- friends of the acre ---------- */
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+.friend-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  box-shadow: 0 3px 0 var(--shadow);
+}
+.friend-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+.friend-photos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.friend-card h3 {
+  font-size: 1.3rem;
+  font-variation-settings: 'SOFT' 70, 'WONK' 0, 'opsz' 40;
+  margin-bottom: 0.4rem;
+}
+.friend-card a {
+  color: var(--plum);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-bottom: 1px dashed color-mix(in srgb, var(--plum) 60%, transparent);
+}
+.friend-card a:hover { border-bottom-style: solid; }
 
 /* ---------- footer ---------- */
 footer { padding: 3.5rem 0; }
