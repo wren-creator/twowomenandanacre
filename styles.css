@@ -106,18 +106,14 @@ h1, h2, h3 {
 /* ---------- hero ---------- */
 .hero {
   position: relative;
-  padding: 6rem 0 5rem;
+  padding: 7rem 0 6rem;
   overflow: hidden;
+  background-image:
+    linear-gradient(100deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 80%, transparent) 32%, color-mix(in srgb, var(--bg) 12%, transparent) 64%),
+    url('assets/hero-garden.jpg');
+  background-size: cover;
+  background-position: center 62%;
 }
-.hero-art {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  opacity: 0.16;
-  color: var(--sage);
-  pointer-events: none;
-}
-.hero-art svg { width: 100%; height: 100%; }
 .hero .wrap { position: relative; z-index: 1; }
 
 .hero h1 {
@@ -160,12 +156,46 @@ h1, h2, h3 {
 .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 var(--shadow); }
 
 /* ---------- about ---------- */
+.about .wrap {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .about .wrap { grid-template-columns: 1fr; }
+}
 .about p {
   font-size: 1.15rem;
   max-width: 58ch;
   color: var(--ink);
 }
 .about p + p { margin-top: 1.1rem; color: var(--ink-dim); }
+
+/* ---------- pinned photo (about + shop) ---------- */
+.pinned-photo { position: relative; }
+.pinned-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 10px solid var(--bg-panel);
+  box-shadow: 0 8px 0 var(--shadow);
+}
+.pinned-photo::before {
+  content: '';
+  position: absolute;
+  top: -0.55rem;
+  left: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--plum);
+  box-shadow: 0 2px 3px var(--shadow);
+  z-index: 2;
+}
+.pinned-photo.tilt-left { transform: rotate(-2deg); }
+.pinned-photo.tilt-right { transform: rotate(2deg); }
+.pinned-photo.tilt-right img { aspect-ratio: 4 / 3; }
 
 /* ---------- pillars: seed packets ---------- */
 .pillars-grid {
@@ -214,6 +244,15 @@ h1, h2, h3 {
 }
 
 /* ---------- shop ---------- */
+.shop-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .shop-wrap { grid-template-columns: 1fr; }
+}
 .shop-intro {
   font-size: 1.15rem;
   max-width: 56ch;

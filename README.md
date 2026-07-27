@@ -11,22 +11,27 @@ jams) launching soon. Hosted on GitHub Pages.
 - `index.html` — the one-page site
 - `styles.css` — all styling, kraft-paper/jam-jar palette, light and dark
   mode via CSS custom properties and `prefers-color-scheme`
-- `assets/` — empty for now, drop farm photos in here once they're ready
-  (see below)
+- `assets/` — farm photos:
+  - `hero-garden.jpg` — wide shot of the raised beds, used as the hero
+    background
+  - `garden-corner.jpg` — strawberries, herbs, and potted saplings, used
+    beside the "Our Acre" text
+  - `harvest-counter.jpg` — fresh harvest with a jar of pickled okra,
+    used beside the Shop section
+  - `bed-closeup.jpg` — a raised bed close-up, not placed on the page
+    yet, good candidate for a future gallery or the Organic Growing
+    card once there are matching photos for Agritourism and Foraging
+    too
 
-## Adding real photos later
+## More photos later
 
-The hero currently uses a line-art botanical pattern instead of a photo.
-Once photos are ready:
-
-1. Drop image files into `assets/`
-2. In `index.html`, the hero block is `<header class="hero">`, replace or
-   layer a photo behind `.hero-art` (currently an inline SVG pattern)
-3. Consider adding photos to the three `.packet` cards in the
-   "what we do" section (Organic Growing, Agritourism, Foraging &
-   Education) in place of the line-art icons
+The three `.packet` cards in "what we do" (Organic Growing, Agritourism,
+Foraging & Education) still use line-art icons rather than photos, to
+keep that grid visually consistent until there are photos for all three.
+Once there are, swap the `<svg class="icon">` blocks in `index.html` for
+`<img>` tags.
 
 ## Contact
 
-- Email: hello@twowomenandanacre.com (needs mailbox/forwarding set up,
+- Email: admin@twowomenandanacre.com (needs mailbox/forwarding set up,
   same as was done for britleyhoff@britleyhoffconsulting.com)
