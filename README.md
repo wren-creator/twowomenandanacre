@@ -43,6 +43,29 @@ A `.friends-grid` of `.friend-card`s for local farms and makers, each
 with two photos and a link (currently just Farm Girl Bakery). Copy the
 existing `.friend-card` block in `index.html` to add another.
 
+## Updating "what we grow, this season"
+
+Drop a photo named for what it is into `~/Downloads/garden` (e.g.
+`cherry-tomatoes.jpg` or `purple okra.png`), then run:
+
+```
+scripts/update-garden-photos.py
+```
+
+It slugifies the filename into an asset name and caption, copies the
+photo into `assets/`, adds (or, if the name matches an existing entry,
+updates) a `<figure>` in the `.grow-strip` in `index.html`, moves the
+source photo into `~/Downloads/garden/processed/` so it isn't
+reprocessed, then commits and pushes to `main`.
+
+Flags:
+- `--dry-run` — show what would change without touching anything
+- `--no-push` — commit locally but skip the push
+
+Because it pushes straight to `main` on a live site, `--dry-run` first
+is worth it any time a filename might collide with an existing crop
+you didn't mean to replace.
+
 ## Contact
 
 - Email: admin@twowomenandanacre.com (needs mailbox/forwarding set up,
