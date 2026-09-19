@@ -66,7 +66,17 @@ Because it pushes straight to `main` on a live site, `--dry-run` first
 is worth it any time a filename might collide with an existing crop
 you didn't mean to replace.
 
+## The Trading Post
+
+A dismissible announcement banner at the top of `index.html` points at
+`barter.twowomenandanacre.com`, the barter/trade board. It's a separate
+Flask app on its own Render service, code lives in the
+`twowomenandanacre-barter` repo, not here. The banner remembers a
+visitor dismissed it via `localStorage`, styled from the same tokens in
+`styles.css` (see the "announcement banner" section at the bottom).
+
 ## Contact
 
-- Email: admin@twowomenandanacre.com (needs mailbox/forwarding set up,
-  same as was done for britleyhoff@britleyhoffconsulting.com)
+- Email: admin@twowomenandanacre.com (mailbox is live via
+  ForwardEmail.net, same setup used for
+  britleyhoff@britleyhoffconsulting.com)
