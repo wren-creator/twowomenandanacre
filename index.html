@@ -13,6 +13,32 @@
 </head>
 <body>
 
+<div class="announce-banner" id="announce-banner" hidden>
+  <div class="wrap">
+    <p>Groceries up, diesel up, dollars stretched thin. Trade what you have for what you need, no cash involved. Live now for Camden &amp; Lugoff.</p>
+    <div class="announce-actions">
+      <a class="btn-announce" href="https://barter.twowomenandanacre.com" target="_blank" rel="noopener">See what's on offer</a>
+      <button class="announce-dismiss" id="announce-dismiss" aria-label="Dismiss announcement" type="button">&times;</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = "dismissed-barter-announce";
+  var banner = document.getElementById("announce-banner");
+  if (!banner) return;
+  try {
+    if (localStorage.getItem(KEY)) return;
+  } catch (e) {}
+  banner.hidden = false;
+  var dismiss = document.getElementById("announce-dismiss");
+  dismiss.addEventListener("click", function () {
+    banner.hidden = true;
+    try { localStorage.setItem(KEY, "1"); } catch (e) {}
+  });
+})();
+</script>
+
 <header class="hero">
   <div class="wrap">
     <p class="tag">farm &middot; classroom &middot; small-batch shop</p>

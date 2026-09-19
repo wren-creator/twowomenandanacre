@@ -392,3 +392,53 @@ a:focus-visible, .btn:focus-visible {
   outline: 2px solid var(--plum);
   outline-offset: 3px;
 }
+
+/* ---------- announcement banner ---------- */
+.announce-banner {
+  background: var(--plum);
+  color: var(--bg-panel);
+}
+.announce-banner .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1.5rem;
+}
+.announce-banner p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+.announce-banner .announce-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-shrink: 0;
+}
+.announce-banner .btn-announce {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 2px;
+  background: var(--honey);
+  color: var(--bg-panel);
+  border: 1.5px solid var(--honey);
+  white-space: nowrap;
+  transition: transform 0.15s ease;
+}
+.announce-banner .btn-announce:hover { transform: translateY(-1px); }
+.announce-dismiss {
+  background: none;
+  border: none;
+  color: var(--bg-panel);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  opacity: 0.75;
+}
+.announce-dismiss:hover { opacity: 1; }
