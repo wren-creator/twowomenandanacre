@@ -16,6 +16,13 @@ a { color: inherit; }
   --honey: #93691a;
   --shadow: rgba(43, 33, 24, 0.16);
 
+  /* Fixed on purpose, not redefined per theme: the banner is meant to
+     read as an alert stripe regardless of light/dark mode, like a
+     jar of marmalade set down on the page. */
+  --alert: #b5651d;
+  --alert-ink: #fff6e6;
+  --alert-btn: #2b2118;
+
   --font-display: 'Fraunces', serif;
   --font-body: 'Public Sans', system-ui, -apple-system, sans-serif;
   --font-hand: 'Caveat', cursive;
@@ -395,50 +402,40 @@ a:focus-visible, .btn:focus-visible {
 
 /* ---------- announcement banner ---------- */
 .announce-banner {
-  background: var(--plum);
-  color: var(--bg-panel);
+  background: var(--alert);
+  color: var(--alert-ink);
 }
 .announce-banner .wrap {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.25rem;
   flex-wrap: wrap;
-  padding: 0.75rem 1.5rem;
+  padding: 1.4rem 1.5rem;
 }
 .announce-banner p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
 }
 .announce-banner .announce-actions {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
   flex-shrink: 0;
 }
 .announce-banner .btn-announce {
   display: inline-block;
   font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
-  padding: 0.45rem 1rem;
+  padding: 0.7rem 1.6rem;
   border-radius: 2px;
-  background: var(--honey);
-  color: var(--bg-panel);
-  border: 1.5px solid var(--honey);
+  background: var(--alert-btn);
+  color: var(--alert-ink);
+  border: 1.5px solid var(--alert-btn);
   white-space: nowrap;
   transition: transform 0.15s ease;
 }
-.announce-banner .btn-announce:hover { transform: translateY(-1px); }
-.announce-dismiss {
-  background: none;
-  border: none;
-  color: var(--bg-panel);
-  font-size: 1.3rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 0 0.2rem;
-  opacity: 0.75;
-}
-.announce-dismiss:hover { opacity: 1; }
+.announce-banner .btn-announce:hover { transform: translateY(-2px); }
